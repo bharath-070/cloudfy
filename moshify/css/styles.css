@@ -101,8 +101,15 @@ a{
     width: 40px;
     height: 40px;
 }
+.icon--small{
+  width: 30px;
+  height: 30px;
+}
 .icon--primary{
     fill: var(--color-primary);
+}
+.icon--white{
+  fill: #fff;
 }
 .icon-container{
     background: #f3f9f3;
@@ -112,6 +119,9 @@ a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+.icon-container--accent{
+  background: var(--color-accent);
 }
 /*buttons*/
 .btn{
@@ -147,18 +157,18 @@ a{
 .btn--accent:hover{
     background: #ec3000;
 }
+.btn--outline{
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover{
+  background: var(--color-headings);
+  color: #fff;
+}
 .btn--block{
     width: 100%;
     display: inline-block;
-}
-.btn--outline{
-    background: #fff;
-    color: var(--color-headings);
-    border: 2px solid var(--color-headings);
-}
-.btn--outline:hover{
-    background: var(--color-headings);
-    color: #fff;
 }
 /*inputs*/
 .input{
@@ -285,6 +295,21 @@ a{
   .grid{
     display: grid;
   }
+  /*testimonial*/
+  .testimonial{
+    padding: 3rem;
+  }
+  .testimonial__image{
+    position: relative;
+  }
+  .testimonial__image > img{
+    width: 100%;
+  }
+  .testimonial__image > .icon-container{
+    position: absolute;
+    top: 3rem;
+    right: -32px;
+  }
 /*media query*/
 @media  screen and (min-width:1024px) {
     body{
@@ -349,5 +374,16 @@ a{
 @media  screen and (min-width:768px) {
     .grid--1x2{
         grid-template-columns: repeat(2,1fr);
+    }
+    .testimonial__image{
+      margin: 0;
+    }
+    .testimonial .quote,
+    .testimonial .quote__author{
+      font-size: 2rem;
+    }
+    .testimonial .quote{
+      margin-left: 6rem;
+      margin-right: 0;
     }
 }
