@@ -281,6 +281,10 @@ a{
     position: relative;
     bottom: 10px;
   }
+  /*grid*/
+  .grid{
+    display: grid;
+  }
 /*media query*/
 @media  screen and (min-width:1024px) {
     body{
@@ -337,4 +341,13 @@ a{
       .quote__organisation{
         font-size: 1.6rem;
       }
+      .grid--1x3{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+/*media query for tablets*/
+@media  screen and (min-width:768px) {
+    .grid--1x2{
+        grid-template-columns: repeat(2,1fr);
+    }
 }
